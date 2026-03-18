@@ -1,20 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Tina's Crazy Eights 🃏
 
-# Run and deploy your AI Studio app
+A classic Crazy Eights card game built with React, Tailwind CSS, and Framer Motion.
 
-This contains everything you need to run your app locally.
+## 🚀 部署到 Vercel (Deployment)
 
-View your app in AI Studio: https://ai.studio/apps/5a3d5490-5ba0-4183-bb2f-672c44aa76fc
+本项目已针对 Vercel 进行了优化。
 
-## Run Locally
+### 1. 同步到 GitHub
+在 Google AI Studio 中，点击右上角的 **Settings** -> **Export to GitHub**。
 
-**Prerequisites:**  Node.js
+### 2. 导入 Vercel
+1. 登录 [Vercel](https://vercel.com)。
+2. 点击 **Add New** -> **Project**。
+3. 导入您刚刚导出的 GitHub 仓库。
+4. **环境变量 (Environment Variables)**:
+   - 如果您的游戏未来需要使用 Gemini AI 功能，请在 Vercel 面板中添加 `GEMINI_API_KEY`。
+5. 点击 **Deploy**。
 
+## 🛠 开发环境 (Development)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建项目
+npm run build
+```
+
+## 游戏规则 (Rules)
+- **发牌**：玩家与 AI 各 8 张牌。
+- **出牌**：必须匹配当前弃牌堆顶部的花色或点数。
+- **疯狂 8 点**：数字“8”是万能牌，出牌后可指定新花色。
+- **摸牌**：无牌可出时需从牌堆摸一张。
+- **获胜**：最先清空手牌的一方获胜。
